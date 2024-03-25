@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body:before{
+    @apply content-[''] absolute top-0 right-0 bg-[url('./../../public/bg-element1.png')] bg-no-repeat w-[346px] h-[346px];
+  }
+  body:after{
+    @apply content-[''] absolute bottom-0 lg:right-[16%] right-[10%] bg-[url('./../../public/bg-element2.png')] bg-no-repeat w-[266px] h-[190px];
+  }
+  header .container{
+    @apply max-w-[100%]
+  }
+  body{
+    @apply bg-[#FAFAFA] relative text-[#10111299]
+  }
+  .btn{
+    @apply text-white text-center text-sm font-medium min-w-[120px] p-4 rounded-2xl cursor-pointer transition-all
+  } 
+  .btn-bordered{
+    @apply border border-solid border-white
+  }
+  .btn-secondry{
+    @apply bg-white text-primary
+  }
+  .btn-style .btn-primary:nth-child(2){
+    @apply border-primary text-primary bg-transparent
+  }
+  .btn-primary{
+    @apply text-white bg-primary min-w-[220px] outline-none border border-solid border-primary p-[19px] text-base tracking-[-0.16px] font-semibold
+  }
+  .btn-primary:hover{
+    @apply bg-white text-primary border-primary
+  }
+  .btn-style .btn-primary:nth-child(2):hover,
+  .btn-bordered:hover,
+  .btn-secondry:hover{
+    @apply bg-primary text-white border-primary
+  }
+}
+
+@layer components{
+  .nav-menu button,
+  .nav-menu a{
+    @apply text-sm opacity-60 font-normal text-secondary hover:opacity-100 hover:text-primary
+  }
+  h1{
+    @apply text-[72px] leading-[111.111%] font-semibold tracking-[-5px] text-secondary
+  }
+  .input-style{
+    @apply px-6 py-5 text-sm font-normal w-full border border-solid border-[#10111233] rounded-[20px] ps-[60px] text-secondary outline-none caret-primary
+  }
+  .input-icon{
+    @apply absolute left-6 top-1/2 translate-y-[-50%]
+  }
+  .input-style:focus{
+    @apply border-primary
+  }
+  .btn-style .btn-primary{
+    @apply py-[13px] text-sm border border-primary min-w-[172px] w-full inline-flex items-center justify-center gap-2 max-w-[336px]
+  } 
+}
+
